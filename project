@@ -1,0 +1,145 @@
+def weapon
+  puts "Which weapon would you like to use?:"
+
+  ["sword","mace","spear"].each do |cat|
+    puts cat
+  end
+
+  cat_input = gets.chomp.downcase
+
+  if cat_input == "sword"
+    puts "A sharp curved sword; has seen better days, but you can never go wrong with the classics." "You stare upon the exquisite short sword with a deep black handle and a blade sitting on top of it so clean you can see your dubble." "As you grab the handle and feel the deep groves embedded  into the hand guard, a shock tingles in your lower spine, revitalzing your awareness." "Some sort of guiding voice tugging at the back of your deep subconcisous pushes your body into action!"
+  end
+
+  if cat_input == "mace"
+    puts "A heavy rock sits atop the handle. royal golden and covered with spikes, this feels weighty in your hand.""You reach for the sturdy mace!" " With a bulky silver handle supporting the massive golden colored handle covered in spikes, no sane person would mess with you." "With a lift from the help of your legs you managed to pick up the heavy mace without hurting your lower back." "as you go to more closely inspect your death hammer, a shock tingles in your lower spine, revitalzing your awareness. Some sort of guiding voice tugging at the back of your deep subconcisous pushes your body into action!"
+  end
+
+  if cat_input =="spear"
+
+    puts "A long spear with a rough looking base and a bronze tip crudley attached to the end. long reach in exchange of firepower.""You stand on the tips of your toes stretching for the spear arms enlongated to reach the lenghty well polished shaft." "While sliding your hand down the handle, admiring the simplicity of this spear a shock tingles in your lower spine, revitalzing your awareness. Some sort of guiding voice tugging at the back of your deep subconcisous pushes your body into action!"
+  end
+  puts "Your body almost instinctively dived, responding to the shocking feeling that erupted moments ago from your weapon." "During your combat roll that your body forced into action, you can make out a whip like sound just narrowly missing where your body once stood." 
+  puts "As you use your momentum to your advantage and use it to speedily get to your feet, you ready your #{cat_input}."
+  "With #{cat_input} in hand and some minor space between you and some sort of abomination with several whips attached to multiple slimey slick brown appendages like an unholy mix of a humanoid and an octopus."
+end
+
+def left_or_right
+
+  puts "Do you want to go (l)eft or (r)ight?"
+  input = gets.chomp.downcase
+
+  # if input == "l" || input == "left"
+  valid_opts = ["l", "left", "(l)", "(l)eft"]
+  valid_opts2 = ["r", "right", "(R)", "(r)ight"]
+
+  # right
+  if valid_opts2.include?(input)
+    puts "you walk in the dark untill you reach a collasium."
+    puts "a man in a crown yells down from a place where you cant excatly pinpoint his location yells,"
+    puts " Defeat this monster for your reward!"
+  end
+    #{#have to figure out how to put after coice from Right}
+
+  # left
+  if  valid_opts.include?(input)
+    puts "'You walk a couple meters feeling the edges of the wall as balence.'"
+
+    puts "'As you continue to travel you notice that your vision is better adjusting to the darkness." 
+    puts "you see a grand table covered in the purest white color you have ever seen with exquisite red lettering." 
+    puts "Pick one and ONLY one item on the table, the diety of Thendos watches over." 
+  end
+end
+
+def look_around_questions
+
+  left_or_right
+  weapon
+  
+
+
+  puts "Suddenly a whip zooms to your position! you decide to?"
+  puts "Hurry! which attack would you like to use?:"
+
+  ["slash","stab","hit"].each do |attack|
+  # attack = gets.chomp.downcase 
+  # this is wrong
+    puts attack
+  end
+
+  # gets.chomp tells prompt to wait for user's input
+  attack_input = gets.chomp.downcase
+
+  if attack_input == "slash"
+    
+    puts "you swing the sword slicing the tentacle in two"
+    puts "As the monster recoils in pain you make a quick lunge to its throat as it helplessly puts up its slimy arms as defense"
+    puts "Your sword quickly makes sushi of the fiend"
+
+  elsif attack_input == "stab"
+
+    puts "You use the tip of your weapon to try to pin the slimy rapidy moving appendage"
+    puts "you manage to hit it but the slim makes it impoaaible for the serrated edge of your sword to truly to damage"
+    puts "The monster quickly recovers from the puncture wound and tackles you, using the remaining arms to hold you down the monster makes sure to not give you a second chance as you did for it"
+    puts "you died"
+  elsif attack_input == "hit"
+    puts "With the blade portion in hand and seconds to spare you grip the sharp blade and feel the steel teeth holding onto uour skin"
+    puts "You recieve a blow through your non-dominant arm, feeling the spiky barbs rip through flesh as the monster pulls his tentacle back"
+    puts "Without giving the monster much of a chance for a secondary strike, you hit the beast with the pummmel of your sword dazing it" 
+    puts "feeling the end of your sword hibt was satisfying but not the feeling of razer sharp teeth cutting your hand"
+    puts "With out even thinking the moster recoiled due to the pain"
+    puts "Switching the blade back to its proper position you use the momentary confusion to your advantage and make waste of the monsetr with a swift slick at the base of the neck"
+
+    puts "As the beast roars in agany you rush to see the light at the end of the tunnel and escape."
+  else 
+    puts "Sorry, not a valid option"
+       
+  end
+  puts "The end?"
+
+  ["The end","Continue?","Restart "].each do |car|
+    puts car
+  end
+  attack_input2 = gets.chomp.downcase
+
+  if attack_input2 == "the end"
+    puts "You live!"
+
+  elsif attack_input2 == "restart"
+    puts "Sorry you must manually restart"
+
+  elsif attack_input2 == "continue"
+    puts "You must wait untill the DLC upcoming next project!"
+
+  else 
+      puts "sorry"
+  end
+  end 
+
+puts "Welcome to Menos: Divine Damnation"
+
+puts "Now, please choose one of these options"
+puts "Options: look around || run away"
+option = gets.chomp
+p option
+
+
+case  option
+
+ when "look around"
+    puts "You are in a dark tunnel surrounded by darkness." 
+    puts "There are two paths available." 
+    puts "To the left you hear a roar in the distance while on the right you feel a mysterious force tugging at your soul."
+    # #go left or right?
+    look_around_questions
+ when "run away"
+    puts "Congratulations! at least you lived, coward."
+end
+
+
+
+
+
+
+
+
